@@ -1,1 +1,2 @@
 # njs-with-docker
+THIS IS FOR TUTORIAL PURPOSE ONLY
