@@ -1,6 +1,6 @@
 job('NodeJS Docker example') {
     scm {
-        git('git://github.com/devbuck/jenkins-docker.git') {  node -> // is hudson.plugins.git.GitSCM
+        git('git://github.com/devbuck/njs-without-docker.git') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('DSL User')
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
         }
@@ -16,7 +16,7 @@ job('NodeJS Docker example') {
         dockerBuildAndPublish {
             repositoryName('devbuck/docker-jennodejs-demo')
             tag('${GIT_REVISION,length=9}')
-            registryCredentials('Devinter1')
+            registryCredentials('devbuck')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)
