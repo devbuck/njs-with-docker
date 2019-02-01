@@ -14,7 +14,7 @@ job('NodeJS Docker example') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('devbuck/docker-jennodejs-demo')
+            repositoryName('devbuck/docker-demo')
             tag('${GIT_REVISION,length=9}')
             registryCredentials('dockerhub') // this is the user id credentials setup on Jenkins console
             forcePull(false)
